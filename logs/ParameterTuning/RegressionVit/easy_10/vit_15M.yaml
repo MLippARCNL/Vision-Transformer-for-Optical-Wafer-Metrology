@@ -1,0 +1,25 @@
+# lightning.pytorch==2.4.0
+seed_everything:
+model:
+  class_path: models.RegressionVit
+  init_args:
+    patch_size: 32
+    hidden_dim: 360
+    n_heads: 8
+    n_layers: 10
+    mlp_factor: 4
+    init: true
+    return_attn: false
+    input_shape:
+    - 2
+    - 256
+    - 256
+    lr: 4.9e-3
+    weight_decay: 9.5e-2
+    dropout: 0.
+    scheduler: cosine
+name: ParameterTuning
+type: vit_15M
+optimizer: null
+lr_scheduler: null
+ckpt_path: null

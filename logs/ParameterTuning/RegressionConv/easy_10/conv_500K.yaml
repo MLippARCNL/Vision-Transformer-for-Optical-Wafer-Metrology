@@ -1,0 +1,27 @@
+# lightning.pytorch==2.4.0
+seed_everything:
+model:
+  class_path: models.RegressionConv
+  init_args:
+    in_channels: 2
+    num_blocks: 4
+    filter_sizes:
+    - 32
+    - 64
+    - 128
+    - 256
+    - 512
+    use_maxpool: true
+    input_shape:
+    - 2
+    - 256
+    - 256
+    lr: 3.4e-3
+    weight_decay: 2.8e-2
+    dropout: 0.
+    scheduler: cosine
+name: ParameterTuning
+type: conv_500K
+optimizer: null
+lr_scheduler: null
+ckpt_path: null

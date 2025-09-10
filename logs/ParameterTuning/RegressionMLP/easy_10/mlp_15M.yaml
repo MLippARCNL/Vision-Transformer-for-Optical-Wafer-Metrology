@@ -1,0 +1,20 @@
+# lightning.pytorch==2.4.0
+seed_everything:
+model:
+  class_path: models.RegressionMLP
+  init_args:
+    hidden_dim: 120
+    n_layers: 3
+    input_shape:
+    - 2
+    - 256
+    - 256
+    lr: 6.7e-5
+    weight_decay: 9.8e-2
+    dropout: 0.
+    scheduler: cosine
+name: ParameterTuning
+type: mlp_15M
+optimizer: null
+lr_scheduler: null
+ckpt_path: null
